@@ -31,7 +31,7 @@
                         $.ajax
                             ({
                                 type: 'post',
-                                url: 'profiledata.php',
+                                url: 'data.php',
                                 data: {
                                     do_update: "do_update",
                                     courseno:no,
@@ -71,7 +71,7 @@
                         $.ajax
                             ({
                                 type: 'post',
-                                url: 'profiledata.php',
+                                url: 'data.php',
                                 data: {
                                     do_add: "do_add",
                                     coursename: name,
@@ -96,7 +96,7 @@
 
                 $("#search").on("input",function () {
                     $.ajax({
-                        url: "profiledata.php",
+                        url: "data.php",
                         type: "POST",
                         data: {
                             readdata: "readdata",
@@ -116,7 +116,7 @@
                 var conf = confirm("Do you really want to delete this course?");
                 if (conf) {
                     $.ajax({
-                        url: "profiledata.php",
+                        url: "data.php",
                         type: "POST",
                         data: {
                             deletecourse:"deletecourse",
@@ -144,7 +144,7 @@
 
             function readrecord() {
                 $.ajax({
-                    url: "profiledata.php",
+                    url: "data.php",
                     type: "POST",
                     data: {
                         readdata: "readdata"
